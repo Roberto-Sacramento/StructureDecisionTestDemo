@@ -5,6 +5,10 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Structure Decision", "Structure Decision.csproj", "{B64E2F87-A71D-4268-9FA3-0BCC8EDE58DD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructureDecision.Test.UnitTest", "..\StructureDecisionTest\StructureDecision.Test.UnitTest.csproj", "{9C677FD0-4DF9-4EEA-BE32-B96D9B7D052B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EAFB667A-0C96-4DED-9923-DB86EF499DFF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,10 @@ Global
 		{B64E2F87-A71D-4268-9FA3-0BCC8EDE58DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B64E2F87-A71D-4268-9FA3-0BCC8EDE58DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B64E2F87-A71D-4268-9FA3-0BCC8EDE58DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C677FD0-4DF9-4EEA-BE32-B96D9B7D052B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C677FD0-4DF9-4EEA-BE32-B96D9B7D052B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C677FD0-4DF9-4EEA-BE32-B96D9B7D052B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C677FD0-4DF9-4EEA-BE32-B96D9B7D052B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
