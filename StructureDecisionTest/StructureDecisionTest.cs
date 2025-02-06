@@ -10,14 +10,14 @@ namespace StructureDecision.Test.UnitTest;
 
     public class StructureDecisionTest
     {
-        [Fact]
-        public void CalculatedBiggestNumber_GivenThreeNumber_WhenFirstNumberIsBigger_ShouldReturnFirstNumber()
+
+    [Theory]
+    [InlineData(10, 2, 5)]
+    public void CalculatedBiggestNumber_GivenThreeNumber_WhenFirstNumberIsBigger_ShouldReturnFirstNumber(int firstNumber, int secondNumber,int thirdNumber)
         {
             //Act
             BaseClasss baseClasss = new BaseClasss();
-            int firstNumber = 10;
-            int secondNumber = 5;
-            int thirdNumber = 2;
+            
             int result = 0;
 
             //Arrange
@@ -45,15 +45,13 @@ namespace StructureDecision.Test.UnitTest;
             Assert.NotEqual(thirdNumber, result);
         }
 
-       [Fact]
-       public void CalculatedBiggestNumber_GivenThreeNumber_WhenSecondNumberIsBigger_ShouldReturnSecondNumber()
+    [Theory]
+    [InlineData(5, 10, 2)]
+    public void CalculatedBiggestNumber_GivenThreeNumber_WhenSecondNumberIsBigger_ShouldReturnSecondNumber(int firstNumber, int secondNumber, int thirdNumber)
        {
         //Act
         BaseClasss baseClasss = new BaseClasss();
-        int firstNumber = 5;
-        int secondNumber = 10;
-        int thirdNumber = 2;
-        int result = 0;
+        int result;
         //Arrange
         baseClasss.CalculateBiggestNumber(firstNumber, secondNumber, thirdNumber);
         if (firstNumber > secondNumber && firstNumber > thirdNumber)

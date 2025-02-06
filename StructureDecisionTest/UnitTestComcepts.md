@@ -98,3 +98,104 @@ Examples:
 
 Assert.True(customCondition, "Custom error message"); // xUnit, NUnit, MSTest
 
+
+
+Fact Attribute
+The Fact attribute is used to denote a test method that's a simple unit test, which doesn't take any parameters. It's a way to indicate that this method should be run as a test.
+
+Description
+Usage: A method with Fact is a test that has no parameters.
+
+Purpose: To define a single test method.
+
+Code Example
+csharp
+using Xunit;
+
+public class CalculatorTests
+{
+    [Fact]
+    public void Add_ReturnsCorrectSum()
+    {
+        // Arrange
+        var calculator = new Calculator();
+
+        // Act
+        var result = calculator.Add(2, 3);
+
+        // Assert
+        Assert.Equal(5, result);
+    }
+}
+
+Theory Attribute
+The Theory attribute is used when you want to run the same test with different sets of data. It's a way to test a method with multiple inputs.
+
+Description
+Usage: A method with Theory can take parameters.
+
+Purpose: To define a parameterized test method.
+
+Data Sources: Usually combined with InlineData or other data sources.
+
+Code Example
+csharp
+using Xunit;
+
+public class CalculatorTests
+{
+    [Theory]
+    [InlineData(1, 2, 3)]
+    [InlineData(3, 3, 6)]
+    [InlineData(2, 4, 6)]
+    public void Add_ReturnsCorrectSum(int a, int b, int expected)
+    {
+        // Arrange
+        var calculator = new Calculator();
+
+        // Act
+        var result = calculator.Add(a, b);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+}
+InlineData Attribute
+The InlineData attribute is used to provide parameter values for a Theory. Each InlineData specifies a different set of arguments for the test method.
+
+Description
+Usage: Used in conjunction with Theory to provide inline data.
+
+Purpose: To supply the data for parameterized tests directly.
+
+Code Example
+csharp
+using Xunit;
+
+public class CalculatorTests
+{
+    [Theory]
+    [InlineData(2, 3, 5)]
+    [InlineData(3, 7, 10)]
+    [InlineData(0, 0, 0)]
+    public void Add_ReturnsCorrectSum(int a, int b, int expected)
+    {
+       // Arrange
+        var calculator = new Calculator();
+
+        // Act
+        var result = calculator.Add(a, b);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+}
+
+
+Summary
+
+Fact: Simple, parameter-less test method.
+
+Theory: Parameterized test method with multiple inputs.
+
+InlineData: Provides the input data for Theory methods.
